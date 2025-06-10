@@ -14,10 +14,12 @@ def scrape_website(url):
     options.add_argument('--headless')  # Run in background
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
+    options.add_argument("--disable-gpu")
+    options.binary_location = "/usr/bin/chromium"
     
 
     # Create the driver
-    driver = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
+    driver = webdriver.Chrome(service=Service("/usr/bin/chromedriver"), options=options)
     driver.get(url)
     
     # ... your scraping logic here ...
