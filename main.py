@@ -8,7 +8,7 @@ from scrape import (
 )
 from parse import parse_with_ollama
 
-st.title("Web server baby ")
+st.title("Start Web scraping ")
 url = st.text_input("Enter Website URL")
 if st.button("Scrape Website"):
      st.write("Scraping the website...")
